@@ -1,0 +1,106 @@
+/* styling specific to the bar */
+
+.bar-launcher {
+  color: $pink;
+  padding-left: 7px;
+}
+
+.bar-music {
+  .spotify-icon {
+    padding-left: 7px;
+  }
+
+  .music-value {
+    padding-left: 7px;
+    padding-right: 7px;
+    color: $green;
+  }
+
+  margin-right: 10px;
+}
+
+.bar-music-controls {
+  border-radius: 5px;
+  transition: 200ms fade-;
+  margin-right: 0px;
+
+  &:hover {
+    background-color: $box-bg-alt;
+    transition: background-color 200ms linear;
+  }
+}
+
+.bar-cpu {
+  padding-left: 7px;
+  margin-right: 10px;
+
+  .cpu-value {
+    padding-left: 7px;
+    padding-right: 7px;
+    color: $blue;
+  }
+
+  .bar-cpu-monitor {
+    margin-right: 0px;
+  }
+}
+
+.bar-memory {
+  padding-left: 7px;
+  margin-right: 10px;
+
+  .memory-value {
+    padding-left: 7px;
+    padding-right: 7px;
+    color: $yellow;
+  }
+
+  .bar-memory-monitor {
+    margin-right: 0px;
+  }
+}
+
+.bar-time {
+  padding-left: 7px;
+  margin-right: 10px;
+
+  .time-value {
+    padding-left: 7px;
+    padding-right: 7px;
+    color: $red;
+  }
+
+  .bar-time-cal {
+    margin-right: 0px;
+  }
+}
+
+.bar-tags {
+  padding-top: 6px;
+  padding-bottom: 6px;
+
+  .tag-1, .tag-2, .tag-3, .tag-4, .tag-5, .tag-6, .tag-7, .tag-8 {
+    margin-right: 7px;
+  }
+
+  .focused-tag {
+    background-color: $pink;
+    color: $bg;
+
+    &:hover {
+      background-color: $green;
+      transition: background-color 200ms linear;
+    }
+  }
+
+  .active-tag {
+    background-color: $blue;
+    color: $bg;
+
+    &:hover {
+      background-color: $yellow;
+      transition: background-color 200ms linear;
+    }
+  }
+}
+

@@ -1,0 +1,16 @@
+(deflisten tags "./scripts/tags.sh")
+(deflisten layout "./scripts/layout.sh")
+(deflisten title "./scripts/title.sh")
+
+(defpoll music :interval "50ms" "./scripts/music.sh")
+(defpoll memory :interval "50ms" "./scripts/memory.sh")
+(defpoll cpu :interval "50ms" "./scripts/cpu.sh")
+(defpoll time :interval "50ms" "./scripts/time.sh")
+
+(defvar barcpumonitorrevealed false)
+(defvar barmemmonitorrevealed false)
+(defvar barcalrevealed false)
+
+(defvar barmusiccontrols false)
+(defvar musicplayicon "/home/radsteve/.config/eww/assets/pause.svg")
+

@@ -1,0 +1,44 @@
+@import 'palette.scss';
+@import 'bar.scss';
+
+/* common CSS styling */
+
+window {
+  all: unset;
+  background-color: rgba(red, 0);
+}
+
+.bar {
+  background-color: $bg;
+  border-radius: 5px;
+}
+
+.box {
+  background-color: $box-bg;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: $box-bg-alt;
+  }
+}
+
+.launcher {
+  color: $pink;
+  padding-left: 7px;
+}
+
+.sep {
+  padding-left: 14px;
+  padding-right: 14px;
+
+  .sep-body {
+    background-color: $box-bg;
+    border-radius: 20px;
+  }
+}
+
+.text {
+  font-family: 'Zed Mono';
+  color: $fg;
+}
+
