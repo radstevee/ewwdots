@@ -1,0 +1,75 @@
+(include "./bar/widgets/widgets.yuck")
+
+(defwidget left[]
+  (box
+    :orientation "h"
+    :space-evenly false
+    :halign "start"
+    :class "left"
+
+    (launcher)
+    (separator)
+    (tags)
+    (separator)
+    (layout)
+    (separator)
+    (title)
+  )
+)
+
+(defwidget right[]
+  (box
+    :orientation "h"
+    :space-evenly false
+    :halign "end"
+    :class "right"
+
+    (music)
+    (cpu)
+    (memory)
+    (time)
+  )
+)
+
+(defwidget bar[]
+  (box
+    :class "bar"
+    :orientation "h"
+
+    (left)
+    (right)
+  )
+)
+
+(defwidget cal[]
+  (calendar)
+)
+
+(defwindow bar0[]
+  :geometry (geometry
+    :x "5px"
+    :y "1030px"
+    :width "1910px"
+    :height "50px"
+  )
+  :monitor 0
+  :stacking "bg"
+  :windowtype "dock"
+
+  (bar)
+)
+
+(defwindow bar1[]
+  :geometry (geometry
+    :x "5px"
+    :y "1030px"
+    :width "1910px"
+    :height "50px"
+  )
+  :monitor 1
+  :stacking "bg"
+  :windowtype "dock"
+
+  (bar)
+)
+

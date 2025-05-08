@@ -1,0 +1,11 @@
+(defwidget title[]
+  (label
+    :text "${title}"
+    :class "text"
+    :justify "left"
+    :unindent true
+    :limit-width 150
+    :truncate true
+  )
+)
+

@@ -1,0 +1,11 @@
+(include "./var.yuck")
+(include "./bar/widgets/separator.yuck")
+(include "./bar/widgets/launcher.yuck")
+(include "./bar/widgets/tags.yuck")
+(include "./bar/widgets/layout.yuck")
+(include "./bar/widgets/title.yuck")
+(include "./bar/widgets/music.yuck")
+(include "./bar/widgets/cpu.yuck")
+(include "./bar/widgets/memory.yuck")
+(include "./bar/widgets/time.yuck")
+

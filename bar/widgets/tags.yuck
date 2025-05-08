@@ -1,0 +1,6 @@
+(defwidget tags[]
+  (literal
+    :content "${tags}"
+  )
+)
+

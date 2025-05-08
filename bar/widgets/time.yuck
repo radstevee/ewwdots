@@ -1,0 +1,53 @@
+(defwidget time[]
+  (eventbox
+    :onhover "eww update barcalrevealed=true"
+    :onhoverlost "eww update barcalrevealed=false"
+
+    (box
+      :orientation "h"
+      :class "box bar-time"
+      :halign "end"
+      :valign "center"
+      :width 50
+      :height 32
+      :space-evenly false
+
+      (image
+        :path "/home/radsteve/.config/eww/assets/time.svg"
+        :image-width 26
+        :image-height 26
+        :class "time-icon"
+        :fill-svg "#dd6777"
+        :halign "start"
+      )
+
+      (label
+        :text "${time}"
+        :justify "center"
+        :class "time-value text"
+      )
+
+      (revealer
+        :transition "slideleft"
+        :reveal barcalrevealed
+        :duration "200ms"
+
+        (button
+          :onclick "notify-send TODO"
+          :class "box bar-time bar-time-cal"
+          :halign "end"
+          :valign "center"
+
+          (image
+            :path "/home/radsteve/.config/eww/assets/cal.svg"
+            :image-width 20
+            :image-height 24
+            :fill-svg "#dd6777"
+            :halign "end"
+          )
+        )
+      )
+    )
+  )
+)
+

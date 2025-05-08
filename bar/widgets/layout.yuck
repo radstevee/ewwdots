@@ -1,0 +1,7 @@
+(defwidget layout[]
+  (label
+    :text "${layout}"
+    :class "text"
+  )
+)
+

@@ -1,0 +1,19 @@
+(defwidget separator[]
+  (box
+    :class "sep"
+    :valign "center"
+    :width 2
+    :height 15
+
+    (box
+      :width 2
+      :class "sep-body"
+      :halign "start"
+
+      (label
+        :text ""
+      )
+    )
+  )
+)
+

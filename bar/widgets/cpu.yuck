@@ -1,0 +1,52 @@
+(defwidget cpu[]
+  (eventbox
+    :onhover "eww update barcpumonitorrevealed=true"
+    :onhoverlost "eww update barcpumonitorrevealed=false"
+
+    (box
+      :orientation "h"
+      :class "box bar-cpu"
+      :halign "end"
+      :valign "center"
+      :width 50
+      :height 14
+      :space-evenly false
+
+      (image
+        :path "/home/radsteve/.config/eww/assets/cpu.svg"
+        :image-width 26
+        :image-height 26
+        :class "cpu-icon"
+        :fill-svg "#86aaec"
+        :halign "start"
+      )
+
+      (label
+        :text "${cpu}"
+        :justify "center"
+        :class "cpu-value text"
+      )
+
+      (revealer
+        :transition "slideleft"
+        :reveal barcpumonitorrevealed
+        :duration "200ms"
+
+        (button
+          :onclick "st -e btop -p 1 &"
+          :class "box bar-cpu bar-cpu-monitor"
+
+          (image
+            :path "/home/radsteve/.config/eww/assets/term.svg"
+            :image-width 24
+            :image-height 24
+            :fill-svg "#86aaec"
+            :halign "end"
+            :valign "center"
+          )
+        )
+      )
+    )
+  )
+)
+

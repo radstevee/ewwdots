@@ -1,0 +1,52 @@
+(defwidget memory[]
+  (eventbox
+    :onhover "eww update barmemmonitorrevealed=true"
+    :onhoverlost "eww update barmemmonitorrevealed=false"
+
+    (box
+      :orientation "h"
+      :class "box bar-memory"
+      :halign "end"
+      :valign "center"
+      :width 50
+      :height 32
+      :space-evenly false
+
+      (image
+        :path "/home/radsteve/.config/eww/assets/memory.svg"
+        :image-width 26
+        :image-height 26
+        :class "memory-icon"
+        :fill-svg "#f1d8a5"
+        :halign "start"
+      )
+
+      (label
+        :text "${memory}"
+        :justify "center"
+        :class "memory-value text"
+      )
+
+      (revealer
+        :transition "slideleft"
+        :reveal barmemmonitorrevealed
+        :duration "200ms"
+
+        (button
+          :onclick "st -e btop -p 2 &"
+          :class "box bar-memory bar-memory-monitor"
+
+          (image
+            :path "/home/radsteve/.config/eww/assets/term.svg"
+            :image-width 24
+            :image-height 24
+            :fill-svg "#f1d8a5"
+            :halign "end"
+            :valign "center"
+          )
+        )
+      )
+    )
+  )
+)
+

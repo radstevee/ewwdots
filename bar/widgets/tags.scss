@@ -1,0 +1,29 @@
+.bar-tags {
+  padding-top: 6px;
+  padding-bottom: 6px;
+
+  .tag-1, .tag-2, .tag-3, .tag-4, .tag-5, .tag-6, .tag-7, .tag-8 {
+    margin-right: 7px;
+  }
+
+  .focused-tag {
+    background-color: $pink;
+    color: $bg;
+
+    &:hover {
+      background-color: $green;
+      transition: background-color 200ms linear;
+    }
+  }
+
+  .active-tag {
+    background-color: $blue;
+    color: $bg;
+
+    &:hover {
+      background-color: $yellow;
+      transition: background-color 200ms linear;
+    }
+  }
+}
+

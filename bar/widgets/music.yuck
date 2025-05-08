@@ -1,0 +1,95 @@
+(defwidget music[]
+  (eventbox
+    :onhover "eww update barmusiccontrols=true"
+    :onhoverlost "eww update barmusiccontrols=false"
+
+    (box
+      :orientation "h"
+      :class "box bar-music"
+      :halign "end"
+      :valign "center"
+      :width 64
+      :height 32
+      :space-evenly false
+
+      (image
+        :path "/home/radsteve/.config/eww/assets/spotify.svg"
+        :image-width 26
+        :image-height 26
+        :class "spotify-icon"
+        :fill-svg "#90ceaa"
+        :halign "start"
+      )
+
+      (label
+        :text "${music}"
+        :class "music-value text"
+        :limit-width 40
+        :truncate true
+      )
+
+      (revealer
+        :transition "slideleft"
+        :reveal barmusiccontrols
+        :duration "200ms"
+
+        (box
+          :orientation "h"
+          :class "box bar-music bar-music-controls"
+          :valign "center"
+          :width 32
+          :height 32
+
+          (button
+            :class "box bar-music-controls"
+            :onclick "playerctl previous"
+            :width 16
+            :height 16
+
+            (image
+              :path "/home/radsteve/.config/eww/assets/prev.svg"
+              :image-width 16
+              :image-height 16
+              :fill-svg "#90ceaa"
+              :halign "start"
+              :valign "center"
+            )
+          )
+
+          (button
+            :class "box bar-music-controls"
+            :onclick "./scripts/playpause.sh"
+            :width 16
+            :height 16
+
+            (image
+              :path "${musicplayicon}"
+              :image-width 16
+              :image-height 16
+              :fill-svg "#90ceaa"
+              :halign "start"
+              :valign "center"
+            )
+          )
+
+          (button
+            :class "box bar-music-controls"
+            :onclick "playerctl next"
+            :width 16
+            :height 16
+
+            (image
+              :path "/home/radsteve/.config/eww/assets/next.svg"
+              :image-width 16
+              :image-height 16
+              :fill-svg "#90ceaa"
+              :halign "start"
+              :valign "center"
+            )
+          )
+        )
+      )
+    )
+  )
+)
+

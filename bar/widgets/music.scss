@@ -1,0 +1,25 @@
+.bar-music {
+  .spotify-icon {
+    padding-left: 7px;
+  }
+
+  .music-value {
+    padding-left: 7px;
+    padding-right: 7px;
+    color: $green;
+  }
+
+  margin-right: 10px;
+}
+
+.bar-music-controls {
+  border-radius: 5px;
+  transition: 200ms fade-;
+  margin-right: 0px;
+
+  &:hover {
+    background-color: $box-bg-alt;
+    transition: background-color 200ms linear;
+  }
+}
+

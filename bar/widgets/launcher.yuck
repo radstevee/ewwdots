@@ -1,0 +1,27 @@
+(defwidget launcher[]
+  (box
+    :orientation "h"
+    :class "bar-launcher"
+    :halign "start"
+    :height 32
+    :width 32
+    :valign "center"
+
+    (button
+      :onclick "dmenu_run &"
+      :class "box bar-launcher"
+      :width 32
+      :height 32
+
+      (image
+        :path "/home/radsteve/.config/eww/assets/launcher.svg"
+        :image-width 22
+        :image-height 29
+        :fill-svg "#c79bf0"
+        :halign "center"
+        :valign "center"
+      )
+    )
+  )
+)
+

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-status="$(playerctl status --player=spotify)"
+status="$(playerctl status --player=spotify > /dev/null)"
 
 if [[ "$status" == "Paused" ]]; then
   eww update "musicplayicon=$HOME/.config/eww/assets/play.svg"

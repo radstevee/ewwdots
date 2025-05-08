@@ -1,0 +1,15 @@
+.bar-cpu {
+  padding-left: 7px;
+  margin-right: 10px;
+
+  .cpu-value {
+    padding-left: 7px;
+    padding-right: 7px;
+    color: $blue;
+  }
+
+  .bar-cpu-monitor {
+    margin-right: 0px;
+  }
+}
+
